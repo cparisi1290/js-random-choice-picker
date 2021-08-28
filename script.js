@@ -33,5 +33,9 @@ function createTags(input) {
 }
 
 function randomSelect() {
-  console.log(123);
+  // console.log(123);
+  const times = 30;
+  const interval = setInerval(() => {
+    const randomTag = pickRandomTag();
+  }, 100);
 }
