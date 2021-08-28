@@ -45,3 +45,10 @@ function pickRandomTag() {
   const tag = document.querySelectorAll('.tag');
   return tags[Math.floor(Math.random() * tags.length)];
 }
+
+function higLightTag(tag) {
+  tag.classList.add('highlight');
+}
+function unHiggLightTag(tag) {
+  tag.classList.add('highlight');
+}
