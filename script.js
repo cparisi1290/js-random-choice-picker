@@ -36,19 +36,25 @@ function randomSelect() {
   // console.log(123);
   const times = 30;
 
-  const interval = setInerval(() => {
+  const interval = setInterval(() => {
     const randomTag = pickRandomTag();
+
+    highlightTag(randomTag);
+
+    setTimeout(() => {
+      unHighlightTag(randomTag);
+    }, 100);
   }, 100);
 }
 
 function pickRandomTag() {
-  const tag = document.querySelectorAll('.tag');
+  const tags = document.querySelectorAll('.tag');
   return tags[Math.floor(Math.random() * tags.length)];
 }
 
-function higLightTag(tag) {
+function highlightTag(tag) {
   tag.classList.add('highlight');
 }
-function unHigLightTag(tag) {
+function unHighlightTag(tag) {
   tag.classList.remove('highlight');
 }
