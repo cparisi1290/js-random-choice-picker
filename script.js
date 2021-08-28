@@ -49,6 +49,6 @@ function pickRandomTag() {
 function higLightTag(tag) {
   tag.classList.add('highlight');
 }
-function unHiggLightTag(tag) {
-  tag.classList.add('highlight');
+function unHigLightTag(tag) {
+  tag.classList.remove('highlight');
 }
