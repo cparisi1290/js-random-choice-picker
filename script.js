@@ -35,7 +35,13 @@ function createTags(input) {
 function randomSelect() {
   // console.log(123);
   const times = 30;
+
   const interval = setInerval(() => {
     const randomTag = pickRandomTag();
   }, 100);
+}
+
+function pickRandomTag() {
+  const tag = document.querySelectorAll('.tag');
+  return tags[Math.floor(Math.random() * tags.length)];
 }
